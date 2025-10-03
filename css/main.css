@@ -1,0 +1,230 @@
+* {
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F3F4F6;
+}
+
+header {
+  height: 18.75rem;
+  width: 100%;
+  background-image: url(../img/background-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+header .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+header .content h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+header .content span {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  background-color: #1D1D1F;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 400;
+}
+
+.content-one {
+  display: flex;
+  width: calc(100% - 6vw);
+  border: none;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background-image: linear-gradient(to right, #E5E7EB 0 50%, #fff 50% 100%);
+  flex-direction: row;
+}
+
+main {
+  width: 100%;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: #1D1D1F;
+  font-weight: 500;
+  color: #394150;
+}
+main .shopping {
+  grid-column: 1/2;
+  width: 50%;
+  padding-right: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+main .shopping .product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .shopping .product figure {
+  display: flex;
+  gap: 1rem;
+}
+main .shopping .product figure span {
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #D2D5DA;
+  border-radius: 1rem;
+}
+main .shopping .product figure span img {
+  max-width: 100%;
+  max-height: 100%;
+}
+main .shopping .product figure .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main .shopping .product figure .info .name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .shopping .product figure .name-quantity,
+main .shopping .product figure .payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .shopping .product figure .name-quantity img,
+main .shopping .product figure .payment img {
+  width: 1.5rem;
+}
+main .shopping .product figure .payment {
+  align-items: end;
+}
+main .shopping .code {
+  width: 100%;
+}
+main .shopping .code form {
+  display: flex;
+  gap: 1rem;
+}
+main .shopping .code form button {
+  width: 30%;
+}
+main .shopping .code form input {
+  background-color: #fff;
+}
+main .shopping .money {
+  width: 100%;
+}
+main .shopping .money table,
+main .shopping .money tr,
+main .shopping .money td,
+main .shopping .money th {
+  width: 100%;
+}
+main .shopping .money tr {
+  color: #394150;
+  padding: 0.5rem 0;
+}
+main .shopping .money table {
+  margin-bottom: 2rem;
+}
+main .shopping .money th {
+  text-align: end;
+}
+main .shopping .money tr:nth-of-type(3) {
+  color: #1D1D1F;
+}
+main .contact {
+  grid-column: 2/3;
+  margin-left: 2rem;
+  width: 50%;
+}
+main .contact form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .contact form div {
+  width: 100%;
+}
+main .contact form input {
+  margin-top: 0.5rem;
+}
+main .contact form label {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+main .contact form .code {
+  display: flex;
+  gap: 2rem;
+}
+main .contact form .code div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .contact form select {
+  padding-right: 1.5rem;
+}
+main h3 {
+  color: #1D1D1F;
+}
+main p {
+  color: #394150;
+}
+
+input,
+select {
+  padding: 1rem;
+  border: 1px solid #D2D5DA;
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: #E5E7EB;
+}
+
+button {
+  color: #fff;
+  background-color: #1D1D1F;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .content-one {
+    padding: 1rem;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #E5E7EB 0 56%, #fff 50% 100%);
+  }
+  main .shopping,
+  main .contact {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  :root {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=main.css.map */

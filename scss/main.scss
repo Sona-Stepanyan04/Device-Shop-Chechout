@@ -1,0 +1,304 @@
+$colorWhite: #fff;
+$colorGray: #E5E7EB;
+$colorWhiteDark: #F3F4F6;
+$colorGrayDark: #D2D5DA;
+$colorAlmostBlack: #1D1D1F;
+$colorDarkSlateBlue: #394150;
+$fwBold: 700;
+$fwRegular: 400;
+$fwMedium: 500;
+$fwSemibold: 600;
+$fsBig: 1.5rem;
+$fsSmall: 1rem;
+
+* {
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin font {
+    font-size: $fsSmall;
+    color: $colorAlmostBlack;
+    font-weight: $fwMedium;
+    color: $colorDarkSlateBlue;
+}
+
+@mixin input {
+    padding: 1rem;
+    border: 1px solid $colorGrayDark;
+    border-radius: 0.5rem;
+    width: 100%;
+    background-color: $colorGray;
+}
+
+@mixin button {
+    color: $colorWhite;
+    background-color: $colorAlmostBlack;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-weight: $fwBold;
+    width: 100%;
+}
+
+body {
+    background-color: $colorWhiteDark;
+}
+
+header {
+    height: 18.75rem;
+    width: 100%;
+    background-image: url(../img/background-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+        gap: 1rem;
+
+
+        h1 {
+            font-size: $fsBig;
+            color: $colorWhite;
+            font-weight: $fwBold;
+        }
+
+        span {
+            font-size: $fsSmall;
+            color: $colorWhite;
+            padding: 0.5rem 1rem;
+            background-color: $colorAlmostBlack;
+            border: none;
+            border-radius: 1rem;
+            font-weight: $fwRegular;
+        }
+    }
+}
+
+
+.content-one {
+    display: flex;
+    width: calc(100% - (2*3vw));
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-image: linear-gradient(to right, $colorGray 0 50%, $colorWhite 50% 100%);
+    flex-direction: row;
+
+
+}
+
+main {
+    width: 100%;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+
+    @include font();
+
+
+    .shopping {
+        grid-column: 1/2;
+        width: 50%;
+        padding-right: 2rem;
+        display: grid;
+        gap: 2rem;
+
+        .product {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            figure {
+                display: flex;
+                gap: 1rem;
+
+                span {
+                    width: 6.25rem;
+                    height: 6.25rem;
+                    background-color: $colorWhite;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.5rem 1rem;
+                    border: 1px solid $colorGrayDark;
+                    border-radius: 1rem;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+
+                .info {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .name {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+
+                    }
+                }
+
+                .name-quantity,
+                .payment {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    img {
+                        width: 1.5rem;
+                    }
+                }
+
+                .payment {
+                    align-items: end;
+                }
+            }
+        }
+
+        .code {
+            width: 100%;
+
+            form {
+                display: flex;
+                gap: 1rem;
+
+                button {
+                    width: 30%;
+                }
+
+                input {
+                    background-color: $colorWhite;
+                }
+            }
+        }
+
+        .money {
+            width: 100%;
+
+            table,
+            tr,
+            td,
+            th {
+                width: 100%;
+            }
+
+            tr {
+                color: $colorDarkSlateBlue;
+                padding: 0.5rem 0;
+            }
+
+            table {
+                margin-bottom: 2rem;
+            }
+
+            th {
+                text-align: end;
+            }
+
+            tr:nth-of-type(3) {
+                color: $colorAlmostBlack;
+            }
+        }
+    }
+
+    .contact {
+        grid-column: 2/3;
+        margin-left: 2rem;
+        width: 50%;
+
+        form {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            div {
+                width: 100%;
+            }
+
+            input {
+                margin-top: 0.5rem;
+            }
+
+            label {
+                font-size: 0.75rem;
+                font-weight: $fwBold;
+            }
+
+            .code {
+                display: flex;
+                gap: 2rem;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+            }
+
+            select {
+                padding-right: 1.5rem;
+            }
+        }
+
+    }
+
+    h3 {
+        color: $colorAlmostBlack;
+    }
+
+    p {
+        color: $colorDarkSlateBlue;
+    }
+
+}
+
+input,
+select {
+    @include input();
+}
+
+button {
+    @include button();
+}
+
+@media only screen and (max-width: 900px) {
+
+    .content-one {
+        padding: 1rem;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom,
+                $colorGray 0 56%,
+                $colorWhite 50% 100%);
+    }
+
+    main{
+        .shopping,
+        .contact{
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+}
+
+@media only screen and (max-width:500px) {
+    :root{
+        font-size: 14px;
+    }
+}
