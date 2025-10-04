@@ -198,7 +198,7 @@ select {
   border: 1px solid #D2D5DA;
   border-radius: 0.5rem;
   width: 100%;
-  background-color: #E5E7EB;
+  background-color: #F3F4F6;
 }
 
 button {
@@ -209,6 +209,14 @@ button {
   padding: 1rem;
   font-weight: 700;
   width: 100%;
+}
+
+input:focus {
+  background-color: rgb(187, 214, 201);
+}
+
+input:hover {
+  background-color: rgb(167, 243, 190);
 }
 
 @media only screen and (max-width: 900px) {
